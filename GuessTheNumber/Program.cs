@@ -19,6 +19,9 @@ namespace GuessTheNumber
             Console.Write("\t\t\t\t*\t\t\t\tGUESS THE NUMBER\t\t\t*\n");
             Console.Write("\t\t\t\t*\t\t\t\t\t\t\t\t\t*\n");
             Console.Write("\t\t\t\t*********************************************************************\n");
+            Console.WriteLine("What's Your Name?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hi {name}, let's play \"Guess the number\"");
             do {
                 Console.Write("Choose a number from 1 to 100: ");
                 yourChoice = int.Parse(Console.ReadLine());
