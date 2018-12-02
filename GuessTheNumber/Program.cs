@@ -14,10 +14,19 @@ namespace GuessTheNumber
             
             Random random = new Random();
             number = random.Next(1,100);
-
+            Console.Write("\t\t\t\t*********************************************************************\n");
+            Console.Write("\t\t\t\t*\t\t\t\t\t\t\t\t\t*\n");
+            Console.Write("\t\t\t\t*\t\t\t\tGUESS THE NUMBER\t\t\t*\n");
+            Console.Write("\t\t\t\t*\t\t\t\t\t\t\t\t\t*\n");
+            Console.Write("\t\t\t\t*********************************************************************\n");
             do {
-                Console.Write("Guess the number: ");
+                Console.Write("Choose a number from 1 to 100: ");
                 yourChoice = int.Parse(Console.ReadLine());
+                if(yourChoice < 1 || yourChoice >100)
+                {
+                    Console.WriteLine("Wrong number! Your choice must be from 1 to 100");
+                    continue;
+                }
 
                 if (yourChoice == number) {
                     Console.WriteLine($"Congrats! You did it. {yourChoice} is the correct number");
